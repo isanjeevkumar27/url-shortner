@@ -48,11 +48,11 @@ const LandingPage = () => {
               placeholder="paste.your/loooong-url-here"
               value={longUrl}
               onChange={(e) => setLongUrl(e.target.value)}
-              className="h-12 flex-1 px-4 font-mono text-sm bg-[#1B1D28] border border-[#2C2E3D] text-[#F5F3EF] placeholder:text-[#5C5E6E] focus-visible:ring-[#E8A73B] rounded-md"
+              className="h-14 flex-1 px-4 py-3 font-mono text-base bg-[#1B1D28] border-2 border-[#2C2E3D] text-[#F5F3EF] placeholder:text-[#5C5E6E] focus-visible:ring-[#E8A73B] focus-visible:border-[#E8A73B] rounded-md shadow-sm"
             />
             <Button
               type="submit"
-              className="h-12 px-6 bg-[#E8A73B] hover:bg-[#F2B754] text-[#12131A] font-semibold rounded-md transition-colors"
+              className="h-14 px-6 bg-[#E8A73B] hover:bg-[#F2B754] text-[#12131A] font-semibold rounded-md transition-colors text-base"
             >
               Trim it
             </Button>
