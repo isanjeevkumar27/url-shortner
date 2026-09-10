@@ -21,5 +21,9 @@ dist-ssr
 *.suo
 *.ntvs*
 *.njsproj
+node_modules
+dist
+.env
+.env.local
 *.sln
 *.sw?
