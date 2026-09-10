@@ -74,19 +74,22 @@ export async function createUrl({title,longUrl,customUrl,user_id},qrcode){
 //here i dont know which id it is 
 //it can be of short url or custom url so i will check both and return the long url
 
-export async function getLongUrl(id){
-    const { data,error } = await supabase
-        .from("urls")
-        .select("id,original_url")
-        .or(`short_url.eq.${id},custom_url.eq.${id}`)
-        .single();//returning single row it means if there are multiple rows it will return error
+export async function getLongUrl(id) {
+    const { data, error } = await supabase
+        .rpc("get_long_url", {
+            p_id: id,
+        });
 
-    if(error){
+    if (error) {
         console.error(error.message);
         throw new Error("Unable to fetch long URL");
     }
 
-    return data;
+    if (!data || data.length === 0) {
+        throw new Error("Short URL not found");
+    }
+
+    return data[0];
 }
 
 // uaparse library
