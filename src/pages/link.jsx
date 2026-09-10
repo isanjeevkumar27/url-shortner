@@ -87,7 +87,7 @@ const Link = () => {
             target="_blank"
             className="text-3xl sm:text-4xl text-[#7C8CFF] font-bold hover:underline cursor-pointer font-mono break-all"
           >
-            https://trimrr.in/{link}
+            https://link-url-shortner.vercel.app/{link}
           </a>
           <a
             href={url?.original_url}
@@ -105,7 +105,7 @@ const Link = () => {
               variant="ghost"
               className="text-[#F5F3EF] hover:bg-[#1B1D28] hover:text-[#E8A73B]"
               onClick={() =>
-                navigator.clipboard.writeText(`https://trimrr.in/${link}`)
+                navigator.clipboard.writeText(`https://link-url-shortner.vercel.app/${link}`)
               }
             >
               <Copy />
