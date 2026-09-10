@@ -71,7 +71,7 @@ const LandingPage = () => {
               </span>
             </div>
             <p className="text-[#E8A73B] font-semibold">
-              trimrr.co/sum2x
+              https://link-url-shortner.vercel.app/abc123
             </p>
           </div>
           <p className="mt-4 text-xs text-[#5C5E6E] font-mono">

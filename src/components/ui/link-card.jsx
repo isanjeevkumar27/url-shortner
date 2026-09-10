@@ -44,7 +44,7 @@ const LinkCard = ({url = [], fetchUrls}) => {
           {url?.title}
         </span>
         <span className="text-2xl text-[#7C8CFF] font-bold hover:underline cursor-pointer font-mono break-all">
-          https://trimrr.in/{url?.custom_url ? url?.custom_url : url.short_url}
+          https://link-url-shortner.vercel.app/{url?.custom_url ? url?.custom_url : url.short_url}
         </span>
         <span className="flex items-center gap-1 hover:underline cursor-pointer text-[#B8B9C4] break-all">
           <LinkIcon className="p-1 shrink-0" />
@@ -59,7 +59,7 @@ const LinkCard = ({url = [], fetchUrls}) => {
           variant="ghost"
           className="text-[#F5F3EF] hover:bg-[#12131A] hover:text-[#E8A73B]"
           onClick={() =>
-            navigator.clipboard.writeText(`https://trimrr.in/${url?.short_url}`)
+            navigator.clipboard.writeText(`https://link-url-shortner.vercel.app/${url?.short_url}`)
           }
         >
           <Copy />

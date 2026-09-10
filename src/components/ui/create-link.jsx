@@ -133,7 +133,7 @@ export default function CreateLink() {
         />
         {errors.longUrl && <Error message={errors.longUrl} />}
         <div className="flex items-center gap-2">
-          <Card className="p-2 bg-[#12131A] border border-[#2C2E3D] text-[#7C8CFF] font-mono text-sm">trimrr.in</Card> <span className="text-[#5C5E6E]">/</span>
+          <Card className="p-2 bg-[#12131A] border border-[#2C2E3D] text-[#7C8CFF] font-mono text-sm">link-url-shortner.vercel.app</Card> <span className="text-[#5C5E6E]">/</span>
           <Input
             id="customUrl"
             placeholder="Custom Link (optional)"
