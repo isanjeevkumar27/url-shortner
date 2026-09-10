@@ -128,8 +128,8 @@ function signup() {
   }
 
   return (
-    <div>
-        <Card>
+    <div className="w-full max-w-md mx-auto px-4 sm:px-0">
+        <Card className="w-full">
   <CardHeader>
     <CardTitle>Signup</CardTitle>
     <CardDescription>create a account if you don't have one</CardDescription>
@@ -143,7 +143,7 @@ function signup() {
         name="email"
         value={formData.email}
         onChange={handleInputChange}
-        className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-base" />
         {errors.email && <Error message={errors.email} />}
     </div>
     <div className="space-y-1">
@@ -153,7 +153,7 @@ function signup() {
         name="name"
         value={formData.name}
         onChange={handleInputChange}
-        className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-base" />
         {errors.name && <Error message={errors.name} />}
     </div>
     <div className="space-y-1">
@@ -162,7 +162,7 @@ function signup() {
         name="password"
         value={formData.password}
         onChange={handleInputChange}
-        className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-base" />
         {errors.password && <Error message={errors.password} />}
     </div>
     <div className="space-y-1">
@@ -170,7 +170,7 @@ function signup() {
         placeholder="Upload your profile picture" 
         name="profile_pic"
         onChange={handleInputChange}
-        className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-base file:mr-2 file:py-1 file:px-2 file:rounded-md file:border-0 file:text-sm" />
         {errors.profile_pic && <Error message={errors.profile_pic} />}
     </div>
   </CardContent>

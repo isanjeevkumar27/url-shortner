@@ -122,8 +122,8 @@ function Login() {
   }
 
   return (
-    <div>
-        <Card>
+    <div className="w-full max-w-md mx-auto px-4 sm:px-0">
+        <Card className="w-full">
   <CardHeader>
     <CardTitle>Login</CardTitle>
     <CardDescription>to your account if you already have one</CardDescription>
@@ -137,7 +137,7 @@ function Login() {
         name="email"
         value={formData.email}
         onChange={handleInputChange}
-        className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-base" />
         {errors.email && <Error message={errors.email} />}
     </div>
     <div className="space-y-1">
@@ -146,7 +146,7 @@ function Login() {
         name="password"
         value={formData.password}
         onChange={handleInputChange}
-        className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-base" />
         {errors.password && <Error message={errors.password} />}
     </div>
   </CardContent>
