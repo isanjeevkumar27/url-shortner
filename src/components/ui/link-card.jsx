@@ -59,8 +59,10 @@ const LinkCard = ({url = [], fetchUrls}) => {
           variant="ghost"
           className="text-[#F5F3EF] hover:bg-[#12131A] hover:text-[#E8A73B]"
           onClick={() =>
-            navigator.clipboard.writeText(`https://link-url-shortner.vercel.app/${url?.short_url}`)
-          }
+  navigator.clipboard.writeText(
+    `https://link-url-shortner.vercel.app/${url?.custom_url || url?.short_url}`
+  )
+}
         >
           <Copy />
         </Button>
