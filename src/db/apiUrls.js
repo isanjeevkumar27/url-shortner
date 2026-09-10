@@ -75,9 +75,11 @@ export async function createUrl({title,longUrl,customUrl,user_id},qrcode){
 //it can be of short url or custom url so i will check both and return the long url
 
 export async function getLongUrl(id){
-    const { data, error } = await supabase
-        .rpc('get_long_url', { p_id: id })
-        .single();
+    const { data,error } = await supabase
+        .from("urls")
+        .select("id,original_url")
+        .or(`short_url.eq.${id},custom_url.eq.${id}`)
+        .single();//returning single row it means if there are multiple rows it will return error
 
     if(error){
         console.error(error.message);
